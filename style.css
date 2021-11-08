@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+html{
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+}
+body{
+    display: grid;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    position: relative;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)),  url('https://source.unsplash.com/random/1000x1000');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
+    z-index: -99;
+}
+.author{
+    position: absolute;
+    right: 1rem;
+    bottom: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.541);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 11px );
+    -webkit-backdrop-filter: blur( 11px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+}
+.wrapper{
+    width: 550px;
+    height: 400px;
+    position: relative;
+    z-index: 99;
+    backdrop-filter: blur(3px) saturate(167%);
+    -webkit-backdrop-filter: blur(3px) saturate(167%);
+    background-color: rgba(255, 255, 255, 0.43);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.quote__container{
+    text-align: center;
+    width: 90%;
+    
+}
+.quote{
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 525ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.fade__author{
+    opacity: 0;
+    transition: opacity 525ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    bottom: -2rem;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 10px;
+}
+.btn{
+    position: relative;
+    z-index: 99;
+    background: rgba( 128, 173, 218, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+    padding: .7rem 1rem;
+    width: 70%;
+}
+.btn:first-child{
+    background: rgba( 95, 162, 236, 0.25 );
+    width: 30%;
+    font-family: 'Poppins', sans-serif;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+.btn:first-child:hover{
+    background: rgba(55, 137, 224, 0.411);
+    box-shadow: 0 8px 32px 0 rgba(28, 130, 240, 0.295);
+}
+
+.fade{
+    opacity: 1;
+    transition: opacity 550ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
